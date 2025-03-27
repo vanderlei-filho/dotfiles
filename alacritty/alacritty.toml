@@ -1,0 +1,12 @@
+[window]
+padding.x = 0
+padding.y = 5
+decorations = "Buttonless"
+
+[[keyboard.bindings]]
+key = "Space"
+mods = "Control"
+chars = "\u0000"
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
