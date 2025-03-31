@@ -12,9 +12,6 @@ config.line_height = 1.2
 config.colors = {
 	foreground = "#c0caf5",
 	background = "#1a1b26",
-	cursor_bg = "#c0caf5",
-	cursor_border = "#c0caf5",
-	cursor_fg = "#1a1b26",
 	selection_bg = "#283457",
 	selection_fg = "#c0caf5",
 	split = "#7aa2f7",
@@ -51,7 +48,7 @@ config.colors = {
 config.color_scheme = "TokyoNight Night"
 
 -- Window
-config.window_decorations = "RESIZE"
+--config.window_decorations = "RESIZE"  -- Remove OS top bar
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
 	left = 15,
