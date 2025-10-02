@@ -1,0 +1,91 @@
+# ghostty +show-config --default --docs
+# ghostty +list-themes
+
+font-family                    = Symbols Nerd Font Mono
+font-family                    = PragmataPro Liga
+font-family-bold               = PragmataPro Liga
+font-family-italic             = PragmataPro Liga
+font-family-bold-italic        = PragmataPro Liga
+
+font-feature                   = calt
+font-feature                   = liga
+font-feature                   = ss13
+
+font-size                      = 15
+window-inherit-font-size       = true
+
+# Look and Feel
+adjust-cursor-thickness        = 3
+adjust-underline-position      = 3
+bold-is-bright                 = true
+cursor-invert-fg-bg            = true
+cursor-opacity                 = 0.8
+link-url                       = true
+mouse-hide-while-typing        = true
+window-vsync                   = true
+cursor-style                   = block
+
+# catppuccin-mocha
+palette = 0=#45475a
+palette = 1=#f38ba8
+palette = 2=#a6e3a1
+palette = 3=#f9e2af
+palette = 4=#89b4fa
+palette = 5=#f5c2e7
+palette = 6=#94e2d5
+palette = 7=#a6adc8
+palette = 8=#585b70
+palette = 9=#f38ba8
+palette = 10=#a6e3a1
+palette = 11=#f9e2af
+palette = 12=#89b4fa
+palette = 13=#f5c2e7
+palette = 14=#94e2d5
+palette = 15=#bac2de
+background = 1e1e2e
+foreground = cdd6f4
+cursor-color = f5e0dc
+cursor-text = 11111b
+selection-background = 353749
+selection-foreground = cdd6f4
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+window-padding-balance = false 
+window-save-state = always
+macos-titlebar-style=transparent
+window-colorspace = "display-p3"
+
+keybind = cmd+s>r=reload_config
+keybind = cmd+s>x=close_surface
+keybind = cmd+s>n=new_window
+
+# tab navigation
+keybind = ctrl+space>c=new_tab
+keybind = ctrl+space>right=next_tab
+keybind = ctrl+space>left=previous_tab
+
+# tab switching
+keybind = ctrl+space>1=goto_tab:1
+keybind = ctrl+space>2=goto_tab:2
+keybind = ctrl+space>3=goto_tab:3
+keybind = ctrl+space>4=goto_tab:4
+keybind = ctrl+space>5=goto_tab:5
+keybind = ctrl+space>6=goto_tab:6
+keybind = ctrl+space>7=goto_tab:7
+keybind = ctrl+space>8=goto_tab:8
+keybind = ctrl+space>9=goto_tab:9
+
+# tab splitting
+keybind = ctrl+space>shift+\=new_split:right
+keybind = ctrl+space>shift+-=new_split:down
+keybind = ctrl+space>shift+down=goto_split:bottom
+keybind = ctrl+space>shift+up=goto_split:top
+keybind = ctrl+space>shift+left=goto_split:left
+keybind = ctrl+space>shift+right=goto_split:right
+keybind = ctrl+space>e=equalize_splits
+keybind = ctrl+space>z=toggle_split_zoom
+
+# other
+copy-on-select = clipboard
