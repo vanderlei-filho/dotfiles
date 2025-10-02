@@ -22,4 +22,5 @@ require("options")
 require("lazy").setup("plugins")
 
 -- Load theme (after plugins are loaded)
-vim.cmd("colorscheme catppuccin-mocha")
+vim.opt.background = "dark"
+vim.cmd("colorscheme neogotham")

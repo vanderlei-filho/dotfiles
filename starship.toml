@@ -76,7 +76,7 @@ format = "[ ($version) ](node_green)"
 
 [git_branch]
 symbol = " "
-format = "[on](gray) [ $branch](git_orange)"
+format = "[on](white) [ $branch](git_orange) $git_status"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
