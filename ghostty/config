@@ -1,20 +1,19 @@
 # ghostty +show-config --default --docs
 # ghostty +list-themes
 
-font-family                    = Symbols Nerd Font Mono
-font-family                    = PragmataPro Liga
-font-family-bold               = PragmataPro Liga
-font-family-italic             = PragmataPro Liga
-font-family-bold-italic        = PragmataPro Liga
-
-font-feature                   = calt
+# font
+font-family                    = JetBrainsMono Nerd Font
+font-family-bold               = JetBrainsMono Nerd Font
+font-family-italic             = JetBrainsMono Nerd Font
+font-family-bold-italic        = JetBrainsMono Nerd Font
+font-feature                   = -calt
 font-feature                   = liga
 font-feature                   = ss13
-
 font-size                      = 15
 window-inherit-font-size       = true
+grapheme-width-method          = unicode
 
-# Look and Feel
+# cursor
 adjust-cursor-thickness        = 3
 adjust-underline-position      = 3
 bold-is-bright                 = true
@@ -52,14 +51,14 @@ selection-foreground = cdd6f4
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
-window-padding-balance = false 
+window-padding-balance = true
 window-save-state = always
 macos-titlebar-style=transparent
 window-colorspace = "display-p3"
 
 keybind = cmd+s>r=reload_config
 keybind = cmd+s>x=close_surface
-keybind = cmd+s>n=new_window
+keybind = ctrl+space>n=new_window
 
 # tab navigation
 keybind = ctrl+space>c=new_tab
