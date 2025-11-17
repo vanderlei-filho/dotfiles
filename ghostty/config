@@ -1,6 +1,3 @@
-# ghostty +show-config --default --docs
-# ghostty +list-themes
-
 # font
 font-family                    = JetBrainsMono Nerd Font
 font-family-bold               = JetBrainsMono Nerd Font
@@ -24,29 +21,29 @@ mouse-hide-while-typing        = true
 window-vsync                   = true
 cursor-style                   = block
 
-# catppuccin-mocha
-background = #0c1014
-foreground = #99d1ce
-selection-background = #0a3749
-selection-foreground = #99d1ce
-cursor-color = #2aa889
-cursor-text = #11151c
-palette = 0=#0c1014
-palette = 1=#c23127
-palette = 2=#2aa889
-palette = 3=#edb443
-palette = 4=#195466
-palette = 5=#4e5166
-palette = 6=#33859e
-palette = 7=#ffffff
-palette = 8=#0c1014
-palette = 9=#c23127
-palette = 10=#2aa889
-palette = 11=#edb443
-palette = 12=#195466
-palette = 13=#4e5166
-palette = 14=#33859e
-palette = 15=#ffffff
+# tokyonight
+palette = 0=#15161e
+palette = 1=#f7768e
+palette = 2=#9ece6a
+palette = 3=#e0af68
+palette = 4=#7aa2f7
+palette = 5=#bb9af7
+palette = 6=#7dcfff
+palette = 7=#a9b1d6
+palette = 8=#414868
+palette = 9=#ff899d
+palette = 10=#9fe044
+palette = 11=#faba4a
+palette = 12=#8db0ff
+palette = 13=#c7a9ff
+palette = 14=#a4daff
+palette = 15=#c0caf5
+
+background = #1a1b26
+foreground = #c0caf5
+cursor-color = #c0caf5
+selection-background = #283457
+selection-foreground = #c0caf5
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
@@ -88,3 +85,5 @@ keybind = ctrl+space>z=toggle_split_zoom
 
 # other
 copy-on-select = clipboard
+keybind = shift+enter=text:\x1b\r
+term = xterm-256color

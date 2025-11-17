@@ -14,7 +14,9 @@ return {
 					"pyright", -- Python
 					"jedi_language_server", -- Python
 					"clangd", -- C and C++
-					"rust_analyzer", -- Rust (added)
+					"rust_analyzer", -- Rust
+					"dockerls", -- Dockerfile
+					"docker_compose_language_service", -- docker-compose.yml
 				},
 			})
 		end,
@@ -115,7 +117,8 @@ return {
 				end,
 				settings = {
 					["rust-analyzer"] = {
-						checkOnSave = {
+						checkOnSave = true,
+						check = {
 							command = "clippy",
 						},
 						inlayHints = {
@@ -126,12 +129,34 @@ return {
 				},
 			}
 
-			-- Enable all configured servers (removed texlab since it's not configured)
-			vim.lsp.enable({ "lua_ls", "pyright", "jedi_language_server", "clangd", "rust_analyzer" })
+			-- Dockerfile
+			vim.lsp.config.dockerls = {
+				cmd = { "docker-langserver", "--stdio" },
+				filetypes = { "dockerfile" },
+				root_markers = { "Dockerfile", "Containerfile", ".git" },
+			}
+
+			-- Docker Compose
+			vim.lsp.config.docker_compose_language_service = {
+				cmd = { "docker-compose-langserver", "--stdio" },
+				filetypes = { "yaml.docker-compose" },
+				root_markers = { "docker-compose.yml", "docker-compose.yaml", "compose.yml", "compose.yaml", ".git" },
+			}
+
+			-- Enable all configured servers
+			vim.lsp.enable({
+				"lua_ls",
+				"pyright",
+				"jedi_language_server",
+				"clangd",
+				"rust_analyzer",
+				"dockerls",
+				"docker_compose_language_service",
+			})
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = "Show LSP definition" })
-			vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Show LSP code action" })
+			vim.keymap.set("n", "<leader>xa", vim.lsp.buf.code_action, { desc = "Show LSP code action" })
 			vim.keymap.set("n", "<leader>lf", function()
 				vim.lsp.buf.format({ async = true })
 			end, { desc = "Format buffer using LSP" })
